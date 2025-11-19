@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="hy">
+<html >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +17,7 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
         .register-form h2 {
+            color: #007bff;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -55,7 +55,7 @@
 
 <div class="register-form">
     <h2>Գրանցում</h2>
-    <form action="register_process.php" method="POST">
+    <form action="form_submit.php" method="POST">
         <label for="first_name">Անուն</label>
         <input type="text" id="first_name" name="first_name" >
 
@@ -79,7 +79,6 @@
             <option value="">Ընտրել սեռը</option>
             <option value="male">Արական</option>
             <option value="female">Իգական</option>
-            <option value="other">Այլ</option>
         </select>
 
         <label for="address">Հասցե</label>
@@ -97,3 +96,5 @@
 
 </body>
 </html>
+
+<
