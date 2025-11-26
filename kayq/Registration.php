@@ -56,7 +56,8 @@
 
         <div class="register-form">
             <h2>Գրանցում</h2>
-            <form action="form_submit.php" method="POST">
+            <form action="form_submit.php" method="POST" >
+
 
                 <label for="first_name">Անուն</label>
                 <input type="text" id="first_name" name="first_name"
