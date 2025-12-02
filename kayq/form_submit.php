@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // phone
     if (empty($_POST['phone'])) {
         $errors['phone'] = "Խնդրում ենք մուտքագրել հեռախոսահամարը։";
-    } elseif (!preg_match("/^\+374\d{2}\d{3}\d{3}$/", $_POST['phone'])) {
+    } elseif (!preg_match("/^\+374\s\d{2}\s\d{3}\s\d{3}$/", $_POST['phone'])) {
         $errors['phone'] = "Հեռախոսահամարը պետք է լինի այս ֆորմատով՝ +374 00 000 000։";
     }
 
