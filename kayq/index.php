@@ -15,7 +15,8 @@
                     <article class="news-card">
                         <img src="./images/logo.jpg" alt="logo" >        
                         <div class="news-body">
-                            <h3>Նորություն 1</h3>
+                            <h3>Ապրանք 1</h3>
+                            <h4>1500դրամ</h4>
                             <p>Սա է կարճ նկարագրությունը Նորություն 1-ի մասին։ Երբեք մի դադարեք հետաքրքրվել և ուսումնասիրել նոր բաներ։</p>
                         </div>
                     </article>
@@ -23,7 +24,8 @@
                     <article class="news-card">
                         <img src="./images/logo.jpg" alt="logo" >        
                         <div class="news-body">
-                            <h3>Նորություն 2</h3>
+                            <h3>Ապրանք 2</h3>
+                            <h4>2500դրամ</h4>
                             <p>Երբեք մի դադարեք հետաքրքրվել և ուսումնասիրել նոր բաներ։</p>
                         </div>
                     </article>
@@ -31,7 +33,8 @@
                     <article class="news-card">
                         <img src="./images/logo.jpg" alt="logo" >        
                         <div class="news-body">
-                            <h3>Նորություն 3</h3>
+                            <h3>Ապրանք 3</h3>
+                            <h4>500դրամ</h4>
                             <p>Սա է կարճ նկարագրությունը Նորություն 3-ի մասին։</p>
                         </div>
                     </article>
@@ -39,7 +42,8 @@
                     <article class="news-card">
                         <img src="./images/logo.jpg" alt="logo" >        
                         <div class="news-body">
-                            <h3>Նորություն 4</h3>
+                            <h3>Ապրանք 4</h3>
+                            <h4>10․000դրամ</h4>
                             <p>Սա է կարճ նկարագրությունը Նորություն 4-ի  Երբեք մի դադարեք հետաքրքրվել և ուսումնասիրել նոր բաներ։</p>
                         </div>
                     </article>

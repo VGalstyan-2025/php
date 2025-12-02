@@ -1,5 +1,5 @@
 :root{
-    --max-width: 1100px;
+    /* --max-width: 1100px; */
     --gap: 1rem;
     --card-radius: 12px;
     --card-padding: 1rem;
@@ -19,7 +19,7 @@ body{
     line-height:1.4;
     display:flex;
     justify-content:center;
-    padding:1.5rem;
+    /* padding:1.5rem; */
 }
 .site{
     width:100%;
@@ -28,6 +28,8 @@ body{
 }
 
 header{
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -50,6 +52,7 @@ nav a{
 }
 
 main{
+
     margin-bottom:1.5rem;
 }
 .news-grid{
@@ -67,7 +70,7 @@ main{
     min-height:100%;
 }
 .news-card img{
-    height:180px;
+    height:220px;
     object-fit:cover;
     display:block;
 }
@@ -94,6 +97,10 @@ main{
 .container {
     width: 100%;
     max-width: 800px;
+}
+header, main{
+    max-width: 1100px;
+    margin: auto;
 }
 main {
     background: white;
@@ -155,6 +162,13 @@ main img {
     color: #555;
 }
 
+@media (max-width: 1200px){
+    header, main{
+        margin-left: 1.5rem !important;
+        margin-right: 1.5rem !important;
+        /* margin: auto; */
+    }
+}
 @media (min-width: 921px){
     .news-card img{
         width:100%;
@@ -169,9 +183,6 @@ main img {
     }
 }
 @media (max-width: 768px){
-    main img {
-        width: 55%;
-    }
     .text-block {
         width: 100%;
     }
@@ -195,11 +206,6 @@ main img {
         margin: auto;
     }
 }
-@media (max-width: 500px){
-    main img {
-        width: 100%;
-    }
-}
 @media (hover:hover){
     .news-card:hover{
         transform:translateY(-4px);
@@ -208,13 +214,12 @@ main img {
     }
 }
 footer{
-    background-image: linear-gradient(to left, #ccd4db, #1d72b8);
+    background-color: #dae2e9;
+    height: 200px !important;
+    /* background-image: linear-gradient(to left, #ccd4db, #1d72b8); */
 }
 article img {
     transition: transform 0.3s ease; 
-}
-    article img:hover {
-    transform: rotate(45deg);
 }
 
 .result {

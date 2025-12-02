@@ -9,6 +9,10 @@
                 background-color: #f0f0f0;
                 font-family: Arial, sans-serif;
             }
+            p{
+                margin-top: 4px;
+                font-size: small;
+            }
             .register-form {
                 max-width: 600px;
                 margin: 50px auto;
@@ -32,7 +36,6 @@
             .register-form textarea {
                 width: 100%;
                 padding: 10px;
-                margin-bottom: 15px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 box-sizing: border-box;
@@ -50,11 +53,17 @@
             .register-form button:hover {
                 background-color: #0056b3;
             }
+            a{
+                text-decoration: none;
+                color: #007bff;
+            }
         </style>
     </head>
     <body>
 
         <div class="register-form">
+            <a href="index.php">Գլխավոր էջ</a>
+
             <h2>Գրանցում</h2>
             <form action="form_submit.php" method="POST" >
 
