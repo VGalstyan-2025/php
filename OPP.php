@@ -70,7 +70,7 @@ echo "<html>
     </style>
 </head>
 <body>
-    <h2 style='text-align: center;'>Computer Specifications</h2>
+    <h2 style='text-align: center;'>Computers</h2>
     <table>
         <tr>
             <th>Name</th>

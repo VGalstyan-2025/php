@@ -16,8 +16,8 @@ $students = [
         body { font-family: Arial; background:#f0f2f5; padding:20px; }
         table { width: 80%; margin:auto; border-collapse: collapse; background: white; }
         th, td { padding: 12px; border: 1px solid #ccc; text-align: center; }
-        th { background: #4CAF50; color:white; }
-        h1 { text-align:center; }
+        th { background: #e99fe3; color:white; }
+        h1 { text-align:center; color: #e99fe3; }
     </style>
 </head>
 <body>
