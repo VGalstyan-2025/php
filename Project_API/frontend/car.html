@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Car Details</title>
+<link rel="stylesheet" href="assets/style2.css">
+</head>
+<body>
+<a href="index.html">← Back to Marketplace</a>
+<div id="carDetails"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const carId = params.get('id');
+
+async function loadCar(){
+    const resp = await fetch(`../api/car.php?id=${carId}`);
+    const data = await resp.json();
+    const container = document.getElementById('carDetails');
+
+    if(data.success){
+        const car = data.car;
+        container.innerHTML = `
+            <h2>${car.title}</h2>
+            <img src="${car.main_image_url}" alt="${car.title}" class="main-img">
+            <p>Year: ${car.year} | Color: ${car.color}</p>
+            <p>Price: $${car.price}</p>
+            <p>Phone: ${car.phone}</p>
+            <p>Description: ${car.description}</p>
+            <h3>Additional Images</h3>
+            <div class="additional-images"></div>
+        `;
+
+        const imgContainer = container.querySelector('.additional-images');
+
+        const mainThumb = document.createElement('img');
+        mainThumb.src = car.main_image_url;
+        mainThumb.className = "thumb";
+        mainThumb.width = 150;
+
+        mainThumb.onclick = () => {
+            document.querySelector('.main-img').src = car.main_image_url;
+        };
+
+        imgContainer.appendChild(mainThumb);
+
+        data.images.forEach(img => {
+            const smallImg = document.createElement('img');
+            smallImg.src = img.image_url;
+            smallImg.className = "thumb";
+            smallImg.width = 150;
+
+            smallImg.onclick = () => {
+                document.querySelector('.main-img').src = img.image_url;
+            };
+
+            imgContainer.appendChild(smallImg);
+        });
+    }
+}
+
+loadCar();
+</script>
+</body>
+</html>
