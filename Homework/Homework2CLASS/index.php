@@ -1,7 +1,6 @@
 <?php
 require_once "classes.php";
 
-// Student-ների զանգված
 $students = [
     new Student("Անի Սարգսյան", "AN1234567", "+37444111222", 20, 91.5, "Ինֆորմատիկա", 2),
     new Student("Արեն Մկրտչյան", "AM9988776", "+37499333777", 19, 87.3, "Ֆիզիկա", 1),
@@ -13,11 +12,30 @@ $students = [
     <meta charset="UTF-8">
     <title>Student Data</title>
     <style>
-        body { font-family: Arial; background:#f0f2f5; padding:20px; }
-        table { width: 80%; margin:auto; border-collapse: collapse; background: white; }
-        th, td { padding: 12px; border: 1px solid #ccc; text-align: center; }
-        th { background: #e99fe3; color:white; }
-        h1 { text-align:center; color: #e99fe3; }
+        body { 
+            font-family: Arial; 
+            background:#f0f2f5; 
+            padding:20px; 
+        }
+        table { 
+            width: 80%; 
+            margin:auto; 
+            border-collapse: collapse; 
+            background: white; 
+        }
+        th, td { 
+            padding: 12px; 
+            border: 1px solid #ccc; 
+            text-align: center; 
+        }
+        th { 
+            background: #e99fe3; 
+            color:white; 
+        }
+        h1 { 
+            text-align:center; 
+            color: #e99fe3; 
+        }
     </style>
 </head>
 <body>

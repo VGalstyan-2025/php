@@ -1,4 +1,50 @@
 <?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+$conn = new mysqli($servername, $username, $password);
+
+if ($conn->connect_error) {
+    die("Connection failed:" . $conn->connect_error);
+}
+echo "Connected 1 successfully". "<br>";
+
+$sql = "CREATE DATABASE IF NOT EXISTS shop_db";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully";
+} else {
+    echo "Error create database: " . $conn->error;
+}
+
+$conn = new mysqli($servername, $username, $password, 'shop_db');
+
+// if ($conn->connect_error) {
+//     die("Connection 2 error");
+// }
+
+$sqlUser = "CREATE TABLE IF NOT EXISTS users (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(150),
+    phone VARCHAR(20),
+    dob DATE NOT NULL,
+    -- reg_data TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON LPDATE CURRENT_TIMESTAMP,
+    gender VARCHAR(10),
+    address TEXT,
+    password VARCHAR(255)
+)
+";
+
+if ($conn->query($sqlUser) === TRUE) {
+    echo "Table users created successfully<br>";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -73,11 +119,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($errors)) {
         $_SESSION['errors'] = $errors;
         $_SESSION['old'] = $old;
-        header("Location: Registration.php");
+        // header("Location: Registration.php");
         exit;
     }
 
     // Եթե սխալներ չկան => form_submit.php
+    $sqlInsert = "INSERT INTO users 
+        (first_name, last_name, username, email, phone, dob, gender, address, password)
+        VALUES (
+            '{$_POST['first_name']}',
+            '{$_POST['last_name']}',
+            '{$_POST['username']}',
+            '{$_POST['email']}',
+            '{$_POST['phone']}',
+            '{$_POST['dob']}',
+            '{$_POST['gender']}',
+            '{$_POST['address']}',
+            '{$_POST['password']}'
+        )
+    ";
+    $conn->query($sqlInsert);
+
+
     echo "<h3>Գրանցումը հաջողությամբ կատարվեց</h3>";
     echo "<a href='Registration.php'>Վերադառնալ սկզբնական էջ</a>";
+
+
 }
